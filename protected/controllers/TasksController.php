@@ -37,8 +37,9 @@ class TasksController extends Core\AbstractController
 
             $this->renderView('task_form', ['model' => $model->fields]);
         }else{
-            header('Location: index.php?r=site/login');
-            exit;
+            echo 'auth';
+            //header('Location: index.php?r=site/login');
+            //exit;
         }
     }
 

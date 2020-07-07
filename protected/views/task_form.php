@@ -14,8 +14,13 @@ $(document).ready(function(){
                     url: window.location.href,
                     data: $('#form').serialize(),
                     success: function(result) {
-                        alert(result);
-                        document.location.href = window.location.origin;
+                        if (result === 'auth'){
+                            document.location.href = window.location.origin+'/index.php?r=site/login';
+                        }else{
+                            alert(result);
+                            document.location.href = window.location.origin;
+                        }
+
                     }
                 });
         }
